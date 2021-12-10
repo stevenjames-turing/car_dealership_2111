@@ -1,5 +1,6 @@
 class Car
   attr_reader :make, :model, :monthly_payment, :loan_length, :color
+  # , :total_cost
 
   def initialize(type, monthly_payment, loan_length)
     @type = type

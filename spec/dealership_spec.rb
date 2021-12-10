@@ -142,6 +142,7 @@ RSpec.describe Dealership do
     dealership.add_car(car_4)
 
     expect(dealership.inventory_hash.keys).to eq(["Ford", "Toyota", "Chevrolet"])
+    expect(dealership.inventory_hash["Toyota"].size).to eq(2)
 
   end
 end

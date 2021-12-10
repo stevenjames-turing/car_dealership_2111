@@ -58,7 +58,11 @@ class Dealership
   def inventory_hash
     inventory_hash = {}
     inventory.each do |car|
-      inventory_hash[car.make] = car
+      if inventory_hash.has_key?(car.make) == false
+        inventory_hash[car.make] = [] << car 
+      else
+        inventory_hash[car.make] << car
+      end
     end
     inventory_hash
   end
